@@ -1,9 +1,13 @@
 from pathlib import Path
+import sys
+
+
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(PROJECT_ROOT))
 
 from src.aigov.database import execute_sql_file
 
 
-PROJECT_ROOT = Path(__file__).resolve().parents[1]
 SCHEMA_FILE = PROJECT_ROOT / "sql" / "001_create_full_schema.sql"
 
 
