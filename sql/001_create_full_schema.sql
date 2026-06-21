@@ -138,7 +138,7 @@ CREATE TABLE IF NOT EXISTS evidence.governance_evidence (
 
 CREATE TABLE IF NOT EXISTS evidence.ai_incidents (
     incident_id SERIAL PRIMARY KEY,
-    external_incident_id TEXT,
+    external_incident_id TEXT UNIQUE,
     source_name TEXT NOT NULL,
     source_url TEXT,
     incident_title TEXT NOT NULL,
