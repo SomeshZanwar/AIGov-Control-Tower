@@ -238,8 +238,7 @@ def get_system_policy_decisions(system_key: str) -> list[dict[str, Any]]:
             p.decision,
             p.severity,
             p.reason,
-            p.control_required,
-            p.created_at
+            p.control_required
         FROM governance.policy_decisions p
         JOIN inventory.ai_systems s
             ON s.system_id = p.system_id
