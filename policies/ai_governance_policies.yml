@@ -1,0 +1,56 @@
+policies:
+  - policy_name: prohibited_use_case_blocked
+    policy_category: prohibited_use
+    description: "AI systems marked as prohibited use cases must be blocked."
+    decision: BLOCKED
+    severity: CRITICAL
+    control_required: "Stop development or deployment until governance committee review."
+    rules:
+      prohibited_use_case: true
+
+  - policy_name: missing_human_review_for_high_impact_ai
+    policy_category: human_review
+    description: "High-impact AI systems must have meaningful human review."
+    decision: REQUIRES_REVIEW
+    severity: HIGH
+    control_required: "Define and implement a human review workflow."
+    rules:
+      decision_impact: HIGH
+      human_review_present: false
+
+  - policy_name: sensitive_data_without_approved_source_review
+    policy_category: data_governance
+    description: "AI systems using unapproved sensitive data sources require data governance review."
+    decision: REQUIRES_REVIEW
+    severity: HIGH
+    control_required: "Complete data source approval and privacy review."
+    rules:
+      has_unapproved_sensitive_data_source: true
+
+  - policy_name: customer_facing_ai_requires_output_controls
+    policy_category: customer_facing_ai
+    description: "Customer-facing AI must have review, monitoring, or escalation controls."
+    decision: APPROVED_WITH_CONTROLS
+    severity: MEDIUM
+    control_required: "Maintain human escalation path and output quality monitoring."
+    rules:
+      customer_facing: true
+
+  - policy_name: third_party_ai_requires_vendor_review
+    policy_category: vendor_risk
+    description: "Third-party AI systems require vendor review before full approval."
+    decision: REQUIRES_REVIEW
+    severity: MEDIUM
+    control_required: "Complete vendor risk review and usage attestation."
+    rules:
+      third_party_vendor: true
+      approval_status: NOT_REVIEWED
+
+  - policy_name: high_risk_tier_requires_governance_review
+    policy_category: risk_management
+    description: "High-risk AI systems require formal governance review."
+    decision: REQUIRES_REVIEW
+    severity: HIGH
+    control_required: "Submit system for AI governance committee review."
+    rules:
+      risk_tier: HIGH
