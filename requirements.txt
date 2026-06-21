@@ -1,0 +1,11 @@
+pandas
+pydantic
+pyyaml
+sqlalchemy
+psycopg2-binary
+python-dotenv
+typer
+rich
+streamlit
+plotly
+pytest
