@@ -35,7 +35,7 @@ jobs:
         run: |
           python -c "from src.aigov.api.main import app; print(app.title)"
 
-            - name: Import governance pipeline modules
+      - name: Import governance pipeline modules
         run: |
           python -c "import src.aigov.risk.scorer; print('risk module ok')"
           python -c "import src.aigov.policy.evaluator; print('policy module ok')"
