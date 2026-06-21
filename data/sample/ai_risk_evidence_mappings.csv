@@ -1,0 +1,7 @@
+system_key,external_incident_id,relevance_reason,mapped_risk_category,mapped_control
+AI-002,AIID-EXAMPLE-002,Customer-facing generative assistants can produce harmful or incorrect responses if not reviewed.,Customer-facing AI output risk,Human review and response quality monitoring
+AI-002,AIID-EXAMPLE-004,Customer support tickets may contain personal or sensitive information.,Sensitive data exposure risk,Privacy review and approved data controls
+AI-003,AIID-EXAMPLE-001,Hiring and employment AI systems require bias review and explainability controls.,Employment bias risk,Bias assessment and human review
+AI-004,AIID-EXAMPLE-003,Financial decision-support systems require stricter governance due to high-impact outcomes.,Financial decisioning risk,Model risk review and performance monitoring
+AI-005,AIID-EXAMPLE-001,Autonomous employment decisioning without meaningful human review is a high-risk governance scenario.,High-impact employment automation risk,Block prohibited use case
+AI-006,AIID-EXAMPLE-004,Third-party AI tools may create data leakage or unapproved data usage risk.,Third-party AI data exposure risk,Vendor review and usage policy attestation

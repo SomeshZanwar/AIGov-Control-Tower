@@ -1,0 +1,8 @@
+system_key,source_name,source_type,source_system,data_owner,business_domain,contains_pii,contains_sensitive_data,contains_financial_data,contains_health_data,quality_status,lineage_available,approved_for_ai_use,retention_policy,access_control_status
+AI-001,Approved HR Policy Documents,DOCUMENT_REPOSITORY,SharePoint,HR Operations Lead,People Operations,true,false,false,false,CERTIFIED,true,true,Retain current and prior approved versions for 7 years,ROLE_BASED_ACCESS
+AI-002,Customer Support Tickets,TICKET_SYSTEM,Zendesk,Director of Customer Support,Customer Experience,true,true,false,false,NEEDS_REVIEW,true,false,Retain according to customer support retention policy,ROLE_BASED_ACCESS
+AI-002,Product Knowledge Base,DOCUMENT_REPOSITORY,Confluence,Product Operations Lead,Product,false,false,false,false,CERTIFIED,true,true,Retain latest approved documentation,ROLE_BASED_ACCESS
+AI-003,Candidate Resumes,DOCUMENT_STORE,Applicant Tracking System,Head of Recruiting,Talent Acquisition,true,true,false,false,NEEDS_REVIEW,false,false,Retain according to recruiting policy,RESTRICTED_ACCESS
+AI-004,Loan Application Data,DATABASE,Credit Risk Warehouse,Credit Risk Director,Financial Services,true,true,true,false,CERTIFIED,true,true,Retain according to financial compliance policy,RESTRICTED_ACCESS
+AI-005,Employee Performance Records,DATABASE,HRIS,HR Operations Lead,Human Resources,true,true,true,false,NEEDS_REVIEW,false,false,Retain according to HR compliance policy,RESTRICTED_ACCESS
+AI-006,Marketing Brand Guidelines,DOCUMENT_REPOSITORY,Google Drive,Marketing Operations Manager,Marketing,false,false,false,false,APPROVED,false,true,Retain latest approved version,UNKNOWN
