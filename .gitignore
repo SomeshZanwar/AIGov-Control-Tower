@@ -14,4 +14,7 @@ dist/
 build/
 *.egg-info/
 data/raw/
-data/processed/
+data/processed/*.csv
+data/processed/*.json
+data/external/ai_incident_database/*.csv
+data/external/ai_incident_database/*.json
