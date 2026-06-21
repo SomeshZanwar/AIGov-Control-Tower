@@ -9,3 +9,5 @@ rich
 streamlit
 plotly
 pytest
+fastapi
+uvicorn
