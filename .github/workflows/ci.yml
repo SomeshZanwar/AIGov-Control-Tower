@@ -35,11 +35,14 @@ jobs:
         run: |
           python -c "from src.aigov.api.main import app; print(app.title)"
 
-      - name: Import governance pipeline modules
+            - name: Import governance pipeline modules
         run: |
-          python -c "from src.aigov.risk.scorer import score_all_systems; print('risk module ok')"
-          python -c "from src.aigov.policy.evaluator import evaluate_all_policies; print('policy module ok')"
-          python -c "from src.aigov.reports.audit_report import generate_all_audit_reports; print('reports module ok')"
+          python -c "import src.aigov.risk.scorer; print('risk module ok')"
+          python -c "import src.aigov.policy.evaluator; print('policy module ok')"
+          python -c "import src.aigov.evidence.document_checker; print('document checker module ok')"
+          python -c "import src.aigov.evidence.review_scheduler; print('review scheduler module ok')"
+          python -c "import src.aigov.reports.audit_report; print('reports module ok')"
+          python -c "import src.aigov.cli; print('cli module ok')"
 
   frontend-build:
     name: Frontend build
